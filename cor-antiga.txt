@@ -1,0 +1,7 @@
+o verde antigo
+
+  color: #2eca7f;
+
+
+
+site-title textozinho
