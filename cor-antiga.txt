@@ -5,3 +5,6 @@ o verde antigo
 
 
 site-title textozinho
+
+#284b63    azul escuro
+#d9d9d9     claro

@@ -61,7 +61,7 @@ body {
   width: 100%;
   font-size: 15px;
   line-height: 1.6em;
-  background-color: #f5f5f5;
+  background-color: #d9d9d9;
   overflow-x: hidden;
   overflow-y: auto;
   background-image: url(../images/main_bg.png);
@@ -118,11 +118,12 @@ p.lead {
 }
 
 img {
-  vertical-align: bottom;
-  max-width: 100%;
-  height: auto;
-  border: 0;
-  -ms-interpolation-mode: bicubic;
+    vertical-align: bottom;
+    max-width: 100%;
+    height: auto;
+    border: 0;
+    border-radius: 150px;
+    -ms-interpolation-mode: bicubic;
 }
 
 .page {
@@ -640,7 +641,7 @@ body > footer .copyrights {
 }
 
 .site-title {
-  color: #49515d;
+  color: #284b63;
   font-size: 20px;
   font-weight: 500;
   font-family: 'Montserrat', Helvetica, sans-serif;
@@ -649,7 +650,7 @@ body > footer .copyrights {
 }
 
 .site-title span {
-  color: #2eca7f;
+  color: #284b63;
 }
 
 .header.sticked .site-title {
@@ -724,7 +725,7 @@ body > footer .copyrights {
   width: 0;
   height: 2px;
   margin: 0 auto;
-  background-color: #2eca7f;
+  background-color: #284b63;
   -webkit-transition: all 0.15s ease-in-out;
   -moz-transition: all 0.15s ease-in-out;
   -o-transition: all 0.15s ease-in-out;
@@ -785,10 +786,7 @@ body > footer .copyrights {
 .block-title h3 {
   font-size: 21px;
   margin: 5px 0 25px;
-}
-
-.block-title h3 span {
-  color: #2eca7f;
+  color: #284b63;
 }
 
 .custom-page-content .block {
@@ -838,22 +836,23 @@ body > footer .copyrights {
 7.1. Home subpage
 ======================================= */
 .start-page-content .page-header {
-  position: relative;
-  background-color: #2eca7f;
-  padding: 50px;
-  margin-bottom: 25px;
-  background-image: url(../images/sp_main_bg.png);
-  background-size: cover;
-  -webkit-background-size: cover;
-  background-attachment: scroll;
-  background-position: center center;
-  background-repeat: no-repeat;
+    position: relative;
+    background-color: #284b63;
+    padding: 50px;
+    margin-bottom: 25px;
+    background-image: url(../images/sp_main_bg.png);
+    background-size: 2px;
+    -webkit-background-size: 200px;
+    background-attachment: scroll;
+    background-position: 800px 110px;
+    background-repeat: no-repeat;
 }
 
 .start-page-content .page-header .photo {
   max-width: 280px;
   margin-bottom: -75px;
   border: 3px solid #fff;
+  border-radius: 150px;
   background-color: #fff;
   -webkit-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.1);
   -moz-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.1);
@@ -2291,7 +2290,7 @@ blockquote footer, blockquote small, blockquote .small {
     top: 50px;
     z-index: 1001;
     overflow: auto;
-    background-color: #2eca7f;
+    background-color: #284b63;
     -webkit-box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.2);
     -moz-box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.2);
     box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.2);
@@ -2326,7 +2325,7 @@ blockquote footer, blockquote small, blockquote .small {
     left: 0;
     right: 0;
     height: 50px;
-    background-color: #2eca7f;
+    background-color: #284b63;
     -webkit-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.1);
     -moz-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.1);
     box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.1);
