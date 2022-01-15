@@ -117,12 +117,21 @@ p.lead {
   margin: 25px 0;
 }
 
+#foto-perfil {
+  vertical-align: bottom;
+  max-width: 100%;
+  height: auto;
+  border: 0;
+  border-radius: 150px;
+  -ms-interpolation-mode: bicubic;
+}
+
+
 img {
     vertical-align: bottom;
     max-width: 100%;
     height: auto;
     border: 0;
-    border-radius: 150px;
     -ms-interpolation-mode: bicubic;
 }
 
@@ -807,13 +816,14 @@ body > footer .copyrights {
 }
 
 .custom-page-content .page-header.color-1 {
-  background-color: #2eca7f;
-  background-image: url(../images/sp_main_bg.png);
-  background-size: cover;
-  -webkit-background-size: cover;
-  background-attachment: scroll;
-  background-position: center center;
-  background-repeat: no-repeat;
+    background-color: #284b63;
+    background-image: url(../images/sp_main_bg.png);
+    background-size: cover;
+    -webkit-background-size: cover;
+    background-attachment: scroll;
+    background-size: 72px;
+    background-position: 940px 50px;
+    background-repeat: no-repeat;
 }
 
 .custom-page-content .page-header.color-1 h2,
@@ -981,7 +991,7 @@ body > footer .copyrights {
   margin-left: 20px;
   margin-bottom: 20px;
   background-color: #fff;
-  border-left: 2px solid #2eca7f;
+  border-left: 2px solid #284b63;
   box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.2);
 }
 
@@ -1003,7 +1013,7 @@ body > footer .copyrights {
   height: 12px;
   top: 20px;
   left: -29px;
-  border: 2px solid #2eca7f;
+  border: 2px solid #284b63;
   z-index: 2;
 }
 
@@ -1011,7 +1021,7 @@ body > footer .copyrights {
   content: '';
   display: inline-block;
   position: absolute;
-  background-color: #2eca7f;
+  background-color: #284b63;
   border-radius: 10px;
   width: 29px;
   height: 2px;
@@ -1031,7 +1041,7 @@ body > footer .copyrights {
   display: inline-block;
   font-size: 12px;
   line-height: 1.2em;
-  color: #2eca7f;
+  color: #284b63;
   margin-bottom: 8px;
 }
 
@@ -1072,7 +1082,7 @@ body > footer .copyrights {
 }
 
 .skill-percentage {
-  background-color: #2eca7f;
+  background-color: #284b63;
   height: 10px;
   padding: 0;
 }
@@ -1179,7 +1189,7 @@ body > footer .copyrights {
   font-size: 48px;
   line-height: 80px;
   color: #fff;
-  background-color: #2eca7f;
+  background-color: #284b63;
   width: 80px;
   height: 80px;
   border-radius: 100px;
@@ -1254,7 +1264,7 @@ body > footer .copyrights {
   font-weight: 400;
   display: block;
   margin: 10px 0;
-  color: #2eca7f;
+  color: #284b63;
 }
 /* /Fun Facts */
 
@@ -1302,7 +1312,7 @@ body > footer .copyrights {
   padding: 2.2em 1.2em 1.5em;
   font-style: italic;
   border: 1px solid #e0e0e0;
-  border-top: 2px solid #2eca7f;
+  border-top: 2px solid #284b63;
   width: 100%;
   position: relative;
   margin: 0;
@@ -1386,7 +1396,7 @@ body > footer .copyrights {
   content: '';
   height: 2px;
   margin-top: 0;
-  background-color: #2eca7f;
+  background-color: #284b63;
   position: absolute;
   left: 0;
   bottom: -3px;
@@ -1463,7 +1473,7 @@ body > footer .copyrights {
 
 .portfolio-filters li.active a,
 .portfolio-filters li.active a:hover {
-  background-color: #2eca7f;
+  background-color: #284b63;
   color: #fff;
 }
 
@@ -1507,7 +1517,7 @@ body > footer .copyrights {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #2eca7f;
+  background-color: #284b63;
   opacity: 0.8;
   z-index: 0;
 }
@@ -1633,7 +1643,7 @@ body > footer .copyrights {
 
 .blog-card .post-date span {
   display: block;
-  color: #2eca7f;
+  color: #284b63;
   line-height: 1;
   font-size: 12px;
   margin: 0;
@@ -1774,7 +1784,7 @@ body > footer .copyrights {
 .contact-info-block i {
   position: relative;
   font-size: 18px;
-  color: #2eca7f;
+  color: #284b63;
   text-align: center;
   line-height: 36px;
 }
@@ -1825,7 +1835,7 @@ body > footer .copyrights {
 .testimonials.owl-carousel .owl-nav .owl-prev:hover,
 .testimonials.owl-carousel .owl-nav .owl-next:hover {
   color: #fff;
-  background-color: #2eca7f;
+  background-color: #284b63;
 }
 
 .testimonials.owl-carousel .owl-nav .owl-prev:before,
@@ -2041,7 +2051,7 @@ body > footer .copyrights {
 }
 
 .project-general-info .fa {
-  color: #2eca7f;
+  color: #284b63;
   margin-right: 5px;
 }
 
@@ -2068,7 +2078,7 @@ body > footer .copyrights {
 
 .share-buttons a:hover {
   color: #fff;
-  background-color: #2eca7f;
+  background-color: #284b63;
   border-color: transparent;
 }
 
@@ -2154,7 +2164,7 @@ body > footer .copyrights {
 
 blockquote {
   margin: 20px 0;
-  border-left: 3px solid #2eca7f;
+  border-left: 3px solid #284b63;
   font-style: italic;
 }
 
