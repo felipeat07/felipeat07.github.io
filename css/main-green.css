@@ -88,9 +88,13 @@ a {
 
 #github-btt, #linkedin-btt, #email-btt{
   font-size: 40px;
-  padding: 20px;
-  margin-left: auto;
+  padding: 25px;
   margin-right: auto;
+  margin-left: auto;
+}
+
+#links{
+  margin-top: 20px;
 }
 
 a:hover {
