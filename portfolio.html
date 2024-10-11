@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio de Felipe Tavares</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* Novo estilo do header com cores pastel */
+        header {
+            background-color: #a3c9c7; /* Cor pastel suave, verde água claro */
+            color: #2c3e50; /* Um tom mais escuro para o texto */
+            text-align: center;
+            padding: 2rem;
+            border-bottom: 3px solid #2c3e50; /* Detalhe moderno */
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+            color: #34495e;
+        }
+
+        /* Estilo dos ícones de contato */
+        .social-icons {
+            position: absolute;
+            top: 1rem;
+            right: 2rem;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-icons a img {
+            width: 32px; /* Tamanho dos ícones */
+            height: 32px;
+        }
+
+        /* Efeito hover nas imagens */
+        .social-icons a:hover img {
+            opacity: 0.7;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #888;
+            text-align: center;
+        }
+
+        .projects-wrapper {
+            background-color: #f5f5f5;
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project {
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .project h3 {
+            background-color: #a3c9c7; /* Usando a mesma cor do header */
+            color: #2c3e50;
+            padding: 1rem;
+            margin: 0;
+        }
+
+        .project p {
+            padding: 1rem;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        footer {
+            background-color: #a3c9c7; /* Mantendo a consistência de cor */
+            color: #2c3e50;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+            border-top: 3px solid #2c3e50;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+            .social-icons {
+                top: 1rem;
+                right: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Felipe Tavares</h1>
+        <p>Cientista de Dados e Mestre em Ciência da Computação</p>
+
+        <!-- Ícones de contato -->
+        <div class="social-icons">
+            <a href="https://linkedin.com/in/seu-usuario" target="_blank">
+                <img src="imagens/linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="mailto:felipe.tavares@email.com">
+                <img src="imagens/email.png" alt="Email">
+            </a>
+            <a href="https://github.com/seu-usuario" target="_blank">
+                <img src="imagens/github.png" alt="GitHub">
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <h2 class="section-title">Projetos em Destaque</h2>
+
+        <div class="projects-wrapper">
+            <section class="projects">
+                <a href="https://github.com/seu-usuario/seu-repositorio/blob/main/notebook.ipynb" target="_blank" class="project">
+                    <h3>Análise Exploratória de Dados (EDA)</h3>
+                    <p>Exploração profunda de datasets populares, gerando insights a partir de visualizações de dados e estatísticas descritivas.</p>
+                </a>
+
+                <div class="project">
+                    <h3>Modelo de Previsão de Vendas</h3>
+                    <p>Previsão de vendas utilizando regressão linear e modelos de machine learning para entender tendências e estimar lucros.</p>
+                </div>
+
+                <div class="project">
+                    <h3>Classificação de Imagens com Redes Neurais</h3>
+                    <p>Implementação de redes neurais convolucionais (CNN) para classificar imagens em datasets como CIFAR-10 e MNIST.</p>
+                </div>
+
+                <div class="project">
+                    <h3>Análise de Sentimento de Tweets</h3>
+                    <p>Utilização de técnicas de processamento de linguagem natural (NLP) para analisar sentimentos de tweets em tempo real.</p>
+                </div>
+
+                <div class="project">
+                    <h3>Detecção de Anomalias em Dados Financeiros</h3>
+                    <p>Detecção de possíveis fraudes em transações financeiras com algoritmos de detecção de anomalias e clustering.</p>
+                </div>
+
+                <div class="project">
+                    <h3>Mineração de Dados em Expansão Urbana</h3>
+                    <p>Análise de dados espaciais para identificar padrões de crescimento urbano e seu impacto na mobilidade.</p>
+                </div>
+
+                <div class="project">
+                    <h3>Dashboard Interativo para Análise de Dados de Saúde</h3>
+                    <p>Criação de dashboards interativos com dados de saúde pública, visualizando tendências e insights em tempo real.</p>
+                </div>
+
+                <div class="project">
+                    <h3>Previsão de Séries Temporais</h3>
+                    <p>Modelagem de séries temporais para prever preços de ações, demanda de energia e outros dados temporais.</p>
+                </div>
+
+                <div class="project">
+                    <h3>Segmentação de Clientes com Machine Learning</h3>
+                    <p>Segmentação de clientes utilizando técnicas de clustering para entender grupos de comportamento e personalizar ações.</p>
+                </div>
+
+                <div class="project">
+                    <h3>Imputação de Dados Categóricos</h3>
+                    <p>Implementação de diferentes métodos de imputação de dados para lidar com valores ausentes em datasets categóricos.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 - Felipe Tavares. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
