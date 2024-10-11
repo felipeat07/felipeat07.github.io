@@ -114,20 +114,30 @@
             padding: 1rem;
             margin-top: 2rem;
             border-top: 3px solid #ecf0f1;
+            position: relative;
         }
 
         footer p {
             margin: 0;
         }
 
+        /* Estilo adicional para ícones no footer no modo mobile */
         @media (max-width: 768px) {
-            .projects {
-                grid-template-columns: 1fr;
+            /* Centraliza os ícones no footer */
+            .footer-social-icons {
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+                margin-bottom: 1rem;
             }
 
+            /* Mostra os ícones no footer e oculta no header */
             .social-icons {
-                top: 1rem;
-                right: 1rem;
+                display: none;
+            }
+
+            .footer-social-icons {
+                display: flex;
             }
         }
     </style>
@@ -137,7 +147,7 @@
         <h1>Felipe Tavares</h1>
         <p>Cientista de Dados</p>
 
-        <!-- Ícones de contato -->
+        <!-- Ícones de contato no header (só aparecem no desktop) -->
         <div class="social-icons">
             <a href="https://linkedin.com/in/felipeat07" target="_blank">
                 <img src="imagens/linkedin.png" alt="LinkedIn">
@@ -210,8 +220,19 @@
     </main>
 
     <footer>
+        <!-- Ícones de contato no footer (aparecem apenas no mobile) -->
+        <div class="footer-social-icons" style="display:none;">
+            <a href="https://linkedin.com/in/felipeat07" target="_blank">
+                <img src="imagens/linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="mailto:felipeat07@gmail.com">
+                <img src="imagens/email.png" alt="Email">
+            </a>
+            <a href="https://github.com/felipeat07" target="_blank">
+                <img src="imagens/github.png" alt="GitHub">
+            </a>
+        </div>
         <p>&copy; 2024 - Felipe Tavares. Todos os direitos reservados.</p>
     </footer>
 </body>
 </html>
-
