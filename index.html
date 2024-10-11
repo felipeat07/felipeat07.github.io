@@ -114,30 +114,32 @@
             padding: 1rem;
             margin-top: 2rem;
             border-top: 3px solid #ecf0f1;
-            position: relative;
         }
 
         footer p {
             margin: 0;
         }
 
-        /* Estilo adicional para ícones no footer no modo mobile */
+        /* Ajustes para mobile e tablet */
         @media (max-width: 768px) {
-            /* Centraliza os ícones no footer */
-            .footer-social-icons {
-                display: flex;
-                justify-content: center;
-                gap: 1rem;
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+            .social-icons {
+                position: static; /* Remover a posição absoluta */
+                justify-content: center; /* Centralizar os ícones no container */
                 margin-bottom: 1rem;
             }
 
-            /* Mostra os ícones no footer e oculta no header */
-            .social-icons {
-                display: none;
+            footer {
+                padding-top: 2rem;
             }
 
-            .footer-social-icons {
-                display: flex;
+            footer .social-icons {
+                margin-bottom: 0.5rem;
+                justify-content: center;
+                gap: 2rem;
             }
         }
     </style>
@@ -147,7 +149,7 @@
         <h1>Felipe Tavares</h1>
         <p>Cientista de Dados</p>
 
-        <!-- Ícones de contato no header (só aparecem no desktop) -->
+        <!-- Ícones de contato -->
         <div class="social-icons">
             <a href="https://linkedin.com/in/felipeat07" target="_blank">
                 <img src="imagens/linkedin.png" alt="LinkedIn">
@@ -220,8 +222,8 @@
     </main>
 
     <footer>
-        <!-- Ícones de contato no footer (aparecem apenas no mobile) -->
-        <div class="footer-social-icons" style="display:none;">
+        <!-- Ícones de contato no footer -->
+        <div class="social-icons">
             <a href="https://linkedin.com/in/felipeat07" target="_blank">
                 <img src="imagens/linkedin.png" alt="LinkedIn">
             </a>
