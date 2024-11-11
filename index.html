@@ -1,228 +1,214 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio de Felipe Tavares</title>
+    <title>Currículo - Felipe Tavares</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f5f5f5; /* Fundo claro */
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
             color: #333;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-
-        /* Estilo do header e footer em tons de cinza */
-        header {
-            background-color: #555; /* Cinza escuro */
-            color: #ecf0f1; /* Texto claro */
+        .container {
+            width: 90%;
+            max-width: 800px;
+            background: #fff;
+            padding: 2em;
+            margin: 2em;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
             text-align: center;
-            padding: 2rem;
-            border-bottom: 3px solid #ecf0f1;
-            position: relative;
+            color: #2575fc;
+        }
+        .section {
+            margin: 1em 0;
+        }
+        .section-title {
+            font-size: 1.5em;
+            margin-bottom: 0.5em;
+            color: #6a11cb;
+            border-bottom: 2px solid #2575fc;
+            padding-bottom: 0.2em;
+        }
+        .about, .experience, .portfolio, .personal-info, .education {
+            font-size: 1em;
+            line-height: 1.6em;
+        }
+        .portfolio-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5em;
+            margin-top: 1em;
+        }
+        .portfolio-item {
+            flex: 1 1 45%;
+            background: #f4f4f4;
+            padding: 1em;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .portfolio-item:hover {
+            transform: scale(1.05);
+        }
+        .portfolio-item h3 {
+            margin-bottom: 0.5em;
+            color: #2575fc;
+        }
+        .download-btn {
+            display: block;
+            text-align: center;
+            padding: 0.8em 2em;
+            margin: 1.5em auto;
+            font-size: 1.1em;
+            color: #fff;
+            background: #6a11cb;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .download-btn:hover {
+            background: #2575fc;
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            margin-top: 0.5rem;
-            color: #bdc3c7; /* Cinza claro */
-        }
-
-        /* Ícones de contato */
+        /* Estilo dos ícones no canto superior direito */
         .social-icons {
             position: absolute;
-            top: 1rem;
-            right: 2rem;
+            top: 10px;
+            right: 10px;
             display: flex;
-            gap: 1rem;
+            gap: 15px;
         }
-
-        .social-icons a img {
-            width: 32px;
-            height: 32px;
-        }
-
-        .social-icons a:hover img {
-            opacity: 0.7;
-        }
-
-        main {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-
-        .section-title {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: #777; /* Cinza médio */
-            text-align: center;
-        }
-
-        .projects-wrapper {
-            background-color: #eaeaea; /* Cinza muito claro */
-            padding: 2rem;
-            border-radius: 8px;
-        }
-
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .project {
-            background-color: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            transition: transform 0.3s, box-shadow 0.3s;
-            text-decoration: none;
-            color: #333;
-        }
-
-        .project:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Mini-headers das caixinhas em cinza */
-        .project h3 {
-            background-color: #777; /* Cinza médio */
-            color: #fff; /* Texto branco */
-            padding: 1rem;
-            margin: 0;
-        }
-
-        .project p {
-            padding: 1rem;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        /* Estilo do footer em tons de cinza */
-        footer {
-            background-color: #555; /* Cinza escuro */
-            color: #ecf0f1;
-            text-align: center;
-            padding: 1rem;
-            margin-top: 2rem;
-            border-top: 3px solid #ecf0f1;
-        }
-
-        footer p {
-            margin: 0;
-        }
-
-        /* Ajustes para mobile e tablet */
-        @media (max-width: 768px) {
-            .projects {
-                grid-template-columns: 1fr;
-            }
-
-            .social-icons {
-                position: static; /* Remover a posição absoluta */
-                justify-content: center; /* Centralizar os ícones no container */
-                margin-bottom: 1rem;
-            }
-
-            footer {
-                padding-top: 2rem;
-            }
-
-            footer .social-icons {
-                margin-bottom: 0.5rem;
-                justify-content: center;
-                gap: 2rem;
-            }
+        .social-icons img {
+            width: 40px; /* Tamanho maior */
+            height: 40px; /* Tamanho maior */
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <header>
+
+    <!-- Ícones clicáveis (Aparecem na página web, mas não no PDF) -->
+    <div class="social-icons">
+        <a href="https://www.linkedin.com/in/seu-linkedin" target="_blank">
+            <img src="Imagens/linkedin.png" alt="LinkedIn">
+        </a>
+        <a href="mailto:seuemail@exemplo.com">
+            <img src="Imagens/email.png" alt="Email">
+        </a>
+        <a href="https://github.com/seu-github" target="_blank">
+            <img src="Imagens/github.png" alt="GitHub">
+        </a>
+    </div>
+
+    <div class="container" id="cv-content">
         <h1>Felipe Tavares</h1>
-        <p>Cientista de Dados</p>
-
-        <!-- Ícones de contato -->
-        <div class="social-icons">
-            <a href="https://linkedin.com/in/felipeat07" target="_blank">
-                <img src="imagens/linkedin.png" alt="LinkedIn">
-            </a>
-            <a href="mailto:felipeat07@gmail.com">
-                <img src="imagens/email.png" alt="Email">
-            </a>
-            <a href="https://github.com/felipeat07" target="_blank">
-                <img src="imagens/github.png" alt="GitHub">
-            </a>
+        
+        <div class="section personal-info">
+            <div class="section-title">Dados Pessoais</div>
+            <p>Email: <a href="mailto:seuemail@exemplo.com">seuemail@exemplo.com</a></p>
         </div>
-    </header>
 
-    <main>
-        <h2 class="section-title">Projetos em Destaque</h2>
-
-        <div class="projects-wrapper">
-            <section class="projects">
-                <a href="https://github.com/seu-usuario/seu-repositorio/blob/main/notebook.ipynb" target="_blank" class="project">
-                    <h3>Análise Exploratória de Dados (EDA)</h3>
-                    <p>Exploração profunda de datasets populares, gerando insights a partir de visualizações de dados e estatísticas descritivas.</p>
-                </a>
-
-                <div class="project">
-                    <h3>Modelo de Previsão de Vendas</h3>
-                    <p>Previsão de vendas utilizando regressão linear e modelos de machine learning para entender tendências e estimar lucros.</p>
-                </div>
-
-                <div class="project">
-                    <h3>Classificação de Imagens com Redes Neurais</h3>
-                    <p>Implementação de redes neurais convolucionais (CNN) para classificar imagens em datasets como CIFAR-10 e MNIST.</p>
-                </div>
-
-                <div class="project">
-                    <h3>Análise de Sentimento de Tweets</h3>
-                    <p>Utilização de técnicas de processamento de linguagem natural (NLP) para analisar sentimentos de tweets em tempo real.</p>
-                </div>
-
-                <div class="project">
-                    <h3>Detecção de Anomalias em Dados Financeiros</h3>
-                    <p>Detecção de possíveis fraudes em transações financeiras com algoritmos de detecção de anomalias e clustering.</p>
-                </div>
-
-                <div class="project">
-                    <h3>Mineração de Dados em Expansão Urbana</h3>
-                    <p>Análise de dados espaciais para identificar padrões de crescimento urbano e seu impacto na mobilidade.</p>
-                </div>
-
-                <div class="project">
-                    <h3>Dashboard Interativo para Análise de Dados de Saúde</h3>
-                    <p>Criação de dashboards interativos com dados de saúde pública, visualizando tendências e insights em tempo real.</p>
-                </div>
-
-                <div class="project">
-                    <h3>Previsão de Séries Temporais</h3>
-                    <p>Modelagem de séries temporais para prever preços de ações, demanda de energia e outros dados temporais.</p>
-                </div>
-
-                <div class="project">
-                    <h3>Segmentação de Clientes com Machine Learning</h3>
-                    <p>Segmentação de clientes utilizando técnicas de clustering para entender grupos de comportamento e personalizar ações.</p>
-                </div>
-
-                <div class="project">
-                    <h3>Imputação de Dados Categóricos</h3>
-                    <p>Implementação de diferentes métodos de imputação de dados para lidar com valores ausentes em datasets categóricos.</p>
-                </div>
-            </section>
+        <div class="section about">
+            <div class="section-title">Apresentação</div>
+            <p>Olá, sou um desenvolvedor, engenheiro de produção e mestre em Ciência da Computação. Apaixonado por tecnologia e inovação, com experiência em desenvolvimento de software, engenharia de sistemas e pesquisa acadêmica.</p>
         </div>
-    </main>
 
-    <footer>
-        <p>&copy; 2024 - Felipe Tavares. Todos os direitos reservados.</p>
-    </footer>
+        <div class="section education">
+            <div class="section-title">Formação Acadêmica</div>
+            <p>Mestre em Ciência da Computação pela Universidade XYZ (Ano de conclusão).</p>
+            <p>Bacharel em Engenharia de Produção pela Universidade ABC (Ano de conclusão).</p>
+        </div>
+
+        <div class="section experience">
+            <div class="section-title">Experiência</div>
+            <p>Trabalho com desenvolvimento web, segurança da informação e automação de processos. Tenho experiência com tecnologias como JavaScript, React, Node.js e Python. Além disso, desenvolvi e implementei soluções escaláveis para pequenos e grandes projetos.</p>
+        </div>
+
+        <div class="section portfolio">
+            <div class="section-title">Portfólio</div>
+            <div class="portfolio-items">
+                <div class="portfolio-item" onclick="window.open('https://github.com/seu-github/projeto1', '_blank')">
+                    <h3>Projeto 1</h3>
+                    <p>Descrição breve do projeto.</p>
+                </div>
+                <div class="portfolio-item" onclick="window.open('https://github.com/seu-github/projeto2', '_blank')">
+                    <h3>Projeto 2</h3>
+                    <p>Descrição breve do projeto.</p>
+                </div>
+                <div class="portfolio-item" onclick="window.open('https://github.com/seu-github/projeto3', '_blank')">
+                    <h3>Projeto 3</h3>
+                    <p>Descrição breve do projeto.</p>
+                </div>
+                <div class="portfolio-item" onclick="window.open('https://github.com/seu-github/projeto4', '_blank')">
+                    <h3>Projeto 4</h3>
+                    <p>Descrição breve do projeto.</p>
+                </div>
+            </div>
+        </div>
+
+        <button class="download-btn" onclick="generatePDF()">Baixar Currículo</button>
+    </div>
+
+    <script>
+        function generatePDF() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            // Não inserindo os ícones no PDF
+
+            // Adiciona título
+            doc.setFontSize(22);
+            doc.text("Felipe Tavares", 20, 30);
+
+            // Dados pessoais
+            doc.setFontSize(14);
+            doc.text("Dados Pessoais", 20, 50);
+            doc.setFontSize(12);
+            doc.text("Email: seuemail@exemplo.com", 20, 60);
+
+            // Apresentação
+            doc.setFontSize(16);
+            doc.text("Apresentação", 20, 80);
+            doc.setFontSize(12);
+            doc.text("Olá, sou um desenvolvedor, engenheiro de produção e mestre em Ciência da Computação. Apaixonado por tecnologia e inovação, com experiência em desenvolvimento de software, engenharia de sistemas e pesquisa acadêmica.", 20, 90);
+
+            // Formação acadêmica
+            doc.setFontSize(16);
+            doc.text("Formação Acadêmica", 20, 120);
+            doc.setFontSize(12);
+            doc.text("Mestre em Ciência da Computação pela Universidade XYZ (Ano de conclusão).", 20, 130);
+            doc.text("Bacharel em Engenharia de Produção pela Universidade ABC (Ano de conclusão).", 20, 140);
+
+            // Experiência
+            doc.setFontSize(16);
+            doc.text("Experiência", 20, 160);
+            doc.setFontSize(12);
+            doc.text("Trabalho com desenvolvimento web, segurança da informação e automação de processos. Tenho experiência com tecnologias como JavaScript, React, Node.js e Python.", 20, 170);
+
+            // Portfólio
+            doc.setFontSize(16);
+            doc.text("Portfólio", 20, 190);
+            doc.setFontSize(12);
+            doc.text("Descrição dos projetos aqui...", 20, 200);
+
+            doc.save('curriculo_felipe_tavares.pdf');
+        }
+    </script>
+
 </body>
 </html>
