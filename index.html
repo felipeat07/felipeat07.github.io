@@ -92,11 +92,40 @@
             right: 10px;
             display: flex;
             gap: 15px;
+            z-index: 10; /* Garante que os ícones apareçam por cima */
         }
         .social-icons img {
             width: 40px; /* Tamanho maior */
             height: 40px; /* Tamanho maior */
             cursor: pointer;
+        }
+
+        /* Estilo dos ícones para telas pequenas */
+        @media (max-width: 768px) {
+            .social-icons {
+                position: static; /* Faz com que os ícones sejam posicionados normalmente no fluxo do layout */
+                margin-top: 20px; /* Adiciona um espaço acima dos ícones */
+                display: block;
+                text-align: center; /* Centraliza os ícones */
+            }
+            .social-icons img {
+                width: 35px; /* Reduz o tamanho dos ícones */
+                height: 35px; /* Reduz o tamanho dos ícones */
+                margin-bottom: 10px; /* Espaço entre os ícones */
+            }
+        }
+
+        /* Ajuste de outros elementos, como o conteúdo do currículo, se necessário */
+        @media (max-width: 480px) {
+            .container {
+                width: 100%; /* Ocupa toda a largura da tela */
+                margin: 10px; /* Reduz a margem */
+                padding: 1.5em; /* Ajusta o padding para telas pequenas */
+            }
+
+            .portfolio-item {
+                flex: 1 1 100%; /* Faz com que cada item do portfólio ocupe toda a largura disponível */
+            }
         }
     </style>
 </head>
@@ -120,18 +149,28 @@
         
         <div class="section personal-info">
             <div class="section-title">Dados Pessoais</div>
-            <p>Email: <a href="mailto:seuemail@exemplo.com">seuemail@exemplo.com</a></p>
+            <p>Email: <a href="mailto:felipeat07@gmail.com">felipeat07@gmail.com</a></p>
         </div>
 
         <div class="section about">
             <div class="section-title">Apresentação</div>
-            <p>Olá, sou um desenvolvedor, engenheiro de produção e mestre em Ciência da Computação. Apaixonado por tecnologia e inovação, com experiência em desenvolvimento de software, engenharia de sistemas e pesquisa acadêmica.</p>
+            <p>Olá, sou um desenvolvedor apaixonado por tecnologia e inovação, com experiência em desenvolvimento de software, engenharia de sistemas e pesquisa acadêmica.</p>
+        </div>
+        
+        <div class="section technologies">
+            <div class="section-title">Tecnologias</div>
+            <p><strong>Desenvolvimento Web:</strong> HTML, CSS, JavaScript, TypeScript, React, Angular, Vue.js</p>
+            <p><strong>Backend:</strong> Node.js, Express.js, Python, Django, Ruby on Rails</p>
+            <p><strong>Banco de Dados:</strong> MongoDB, PostgreSQL, MySQL, Redis</p>
+            <p><strong>DevOps & Infraestrutura:</strong> Docker, Kubernetes, Jenkins, Nginx, AWS, GCP</p>
+            <p><strong>Controle de Versão:</strong> Git, GitHub, GitLab, Bitbucket</p>
+            <p><strong>Outras Tecnologias:</strong> GraphQL, REST APIs, WebSockets, JWT, OAuth</p>
         </div>
 
         <div class="section education">
             <div class="section-title">Formação Acadêmica</div>
-            <p>Mestre em Ciência da Computação pela Universidade XYZ (Ano de conclusão).</p>
-            <p>Bacharel em Engenharia de Produção pela Universidade ABC (Ano de conclusão).</p>
+            <p>Mestre em Ciência da Computação pelo Centro Federal de Educação Tecnológica Celso Suckow da Fonseca (CEFET/RJ) (2025).</p>
+            <p>Bacharel em Engenharia de Produção pela Universidade Federal Fluminense (2021).</p>
         </div>
 
         <div class="section experience">
@@ -179,7 +218,7 @@
             doc.setFontSize(14);
             doc.text("Dados Pessoais", 20, 50);
             doc.setFontSize(12);
-            doc.text("Email: seuemail@exemplo.com", 20, 60);
+            doc.text("Email: felipeat07@gmail.com", 20, 60);
 
             // Apresentação
             doc.setFontSize(16);
@@ -198,17 +237,11 @@
             doc.setFontSize(16);
             doc.text("Experiência", 20, 160);
             doc.setFontSize(12);
-            doc.text("Trabalho com desenvolvimento web, segurança da informação e automação de processos. Tenho experiência com tecnologias como JavaScript, React, Node.js e Python.", 20, 170);
+            doc.text("Trabalho com desenvolvimento web, segurança da informação e automação de processos. Tenho experiência com tecnologias como JavaScript, React, Node.js e Python. Além disso, desenvolvi e implementei soluções escaláveis para pequenos e grandes projetos.", 20, 170);
 
-            // Portfólio
-            doc.setFontSize(16);
-            doc.text("Portfólio", 20, 190);
-            doc.setFontSize(12);
-            doc.text("Descrição dos projetos aqui...", 20, 200);
-
-            doc.save('curriculo_felipe_tavares.pdf');
+            // Salva o arquivo PDF
+            doc.save("Currículo_Felipe_Tavares.pdf");
         }
     </script>
-
 </body>
 </html>
